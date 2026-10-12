@@ -1,0 +1,27 @@
+旅行规划智能体
+|----main.py            整个服务器入口
+|----index.html         前端页面
+|----.env               环境配置文件
+|----requirements.txt
+|----config.py          存放整个项目的全局信息
+|----Agent_com          这个是目录，存放不同功能的子智能体和主智能体
+     |----main_agent.py         总指挥智能体，负责分析任务并转交给子智能体
+     |----route_agent.py        #自驾路线规划智能体
+     |----hotel_agent.py        #酒店规划智能体
+     |----traffic_agent.py      #车票预定智能体（交通方案顾问）
+     |----weather_agent.py      #天气查询智能体（实时天气+未来预报+出行建议）
+     |----food_agent.py         #美食推荐智能体（餐厅/菜系/人均）
+     |----budget_agent.py       #旅行预算智能体（分项费用汇总+省钱建议）
+#MCP工具层
+|----Mcp 目录
+|----routeSchemas.py     这个文件里面包含了把高德返回的json 数据格式通过pydantic转成python对象格式
+|----Schemas.py          这里面存放高德基础信息数据结构 比如 景点信息
+|----amap_mcp.py         这里面设计了给skill调用的api接口,这个接口提供了高德数据清洗，筛选的方法
+                          目前包含：GeomMCP地理编码 / WeatherMCP天气 / RoutePlanMCP路线+景点 /
+                          HotelSearchMCP酒店 / FoodSearchMCP美食 / BudgetMCP预算
+#skill 业务层
+|----route_skill.py      #路线规划技能
+|----hotel_skill.py      #酒店检索. 预定技能
+|----weather_skill.py    #天气查询技能（实时+预报合并）
+|----food_skill.py       #美食推荐技能
+|----budget_skill.py     #预算计算技能

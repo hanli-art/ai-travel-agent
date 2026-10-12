@@ -1,0 +1,24 @@
+# 密钥与环境变量（绝不入库）
+.env
+*.keystore
+
+# Python
+__pycache__/
+*.pyc
+
+# 运行时产物
+static/route_map_*.svg
+
+# 本地测试/工作台产物
+.workbuddy/
+
+# 移动端
+mobile_app/node_modules/
+mobile_app/android/.gradle/
+mobile_app/android/build/
+mobile_app/android/app/build/
+mobile_app/android/local.properties
+mobile_app/android/capacitor-cordova-android-plugins/build/
+
+# APK 产物
+*.apk

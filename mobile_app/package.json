@@ -1,0 +1,17 @@
+{
+  "name": "ai-travel-assistant",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI 旅游小助手 APK 壳（Capacitor WebView + 云端 FastAPI 后端）",
+  "dependencies": {
+    "@capacitor/android": "^6.1.2",
+    "@capacitor/core": "^6.1.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.1.2"
+  },
+  "scripts": {
+    "sync": "cap sync",
+    "open:android": "cap open android"
+  }
+}
